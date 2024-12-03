@@ -24,12 +24,8 @@
     deno
     pipx
     gh
-<<<<<<< HEAD
-  ];
-=======
     starship
     lazygit
  ];
->>>>>>> da0a81a (add lazygit and transmission)
 }
 

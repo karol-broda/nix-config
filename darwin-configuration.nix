@@ -6,6 +6,7 @@
     ./modules/nixpkgs/user-apps.nix
     ./modules/homebrew/casks.nix
     ./modules/darwin/dock.nix
+    ./modules/darwin/tid-sudo.nix
   ];
 
   system.stateVersion = 5;

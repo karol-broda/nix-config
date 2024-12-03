@@ -37,11 +37,17 @@ this is my nix configuration repository for macos. it includes both system and u
    ```sh
    cd ~/nix-config
    ```
+2. get your hostname:
+   ```sh
+   scutil --get LocalHostName
+   ```
+
+3. update the hostname in `./flake.nix`
 
 2. update the flake and apply the configuration:
    ```sh
    nix flake update
-   darwin-rebuild switch --flake .#myMac
+   nix run github:LnL7/nix-darwin -- switch --flake ~/nix-config
    ```
 
 ---
@@ -206,7 +212,7 @@ verify the package exists in the nixpkgs repository or check your `nixpkgs` inpu
 ensure you are running the correct commands:
 ```sh
 nix flake update
-darwin-rebuild switch --flake .#myMac
+nix run github:LnL7/nix-darwin -- switch --flake ~/nix-config
 ```
 
 ---

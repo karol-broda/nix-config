@@ -18,6 +18,7 @@
       "microsoft-powerpoint"
       "microsoft-word"
       "microsoft-teams"
+      "the-unarchiver"
     ];
   };
 }

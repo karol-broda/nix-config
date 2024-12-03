@@ -10,6 +10,6 @@
     _1password-cli
     discord
     modrinth-app
-    transmission_4
+    transmission_4-qt
   ];
 }

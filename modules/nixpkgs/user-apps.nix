@@ -10,5 +10,9 @@
     _1password-cli
     discord
     modrinth-app
+<<<<<<< HEAD
+=======
+    transmission_4
+>>>>>>> da0a81a (add lazygit and transmission)
   ];
 }

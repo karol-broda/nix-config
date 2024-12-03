@@ -15,7 +15,11 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       darwinConfigurations = {
+<<<<<<< HEAD
         myMac = darwin.lib.darwinSystem {
+=======
+        "Karols-MacBook-Pro" = darwin.lib.darwinSystem {
+>>>>>>> da0a81a (add lazygit and transmission)
           system = "aarch64-darwin";
           modules = [ ./darwin-configuration.nix ];
         };

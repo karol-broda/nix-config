@@ -19,6 +19,10 @@
       "microsoft-teams"
       "the-unarchiver"
       "raspberry-pi-imager"
+      "angry-ip-scanner"
+      "balenaetcher"
+      "dymo-label"
+      "android-studio"
     ];
   };
 }

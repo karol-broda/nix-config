@@ -22,10 +22,12 @@
     docker-compose
     qemu
     deno
-    pipx
     gh
     starship
     lazygit
+    uv
+    ollama
+    mas
  ];
 }
 

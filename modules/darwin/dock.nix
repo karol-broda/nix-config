@@ -37,6 +37,8 @@ in
         { path = "/Applications/Microsoft Teams.app"; section = "apps"; }
 
         { path = "/Applications/1Password.app"; section = "apps"; }
+	
+	{ path = "/System/Applications/Calendar.app/"; section = "apps"; }
 
         { path = "/Applications/Nix Apps/Spotify.app"; section = "apps"; }
         { path = "/Applications/Nix Apps/Discord.app"; section = "apps"; }

@@ -5,6 +5,7 @@
     ./modules/nixpkgs/system-apps.nix
     ./modules/nixpkgs/user-apps.nix
     ./modules/homebrew/casks.nix
+    ./modules/homebrew/appstore.nix
     ./modules/darwin/dock.nix
     ./modules/darwin/tid-sudo.nix
   ];

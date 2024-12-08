@@ -13,5 +13,6 @@
     transmission_4-qt
     audacity
     balena-cli
+    neovide
   ];
 }

@@ -28,6 +28,17 @@
     uv
     ollama
     mas
+    poetry
+    libpqxx
+    postgresql
+    flutter
+    lazysql
+    just
+    kubectl
+    minikube
+    tesseract
+    kubernetes-helm
+    nmap
  ];
 }
 

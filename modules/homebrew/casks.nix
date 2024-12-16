@@ -17,6 +17,8 @@
       "microsoft-excel"
       "microsoft-powerpoint"
       "microsoft-teams"
+      "microsoft-word"
+      "adobe-acrobat-pro"
       "the-unarchiver"
       "raspberry-pi-imager"
       "angry-ip-scanner"

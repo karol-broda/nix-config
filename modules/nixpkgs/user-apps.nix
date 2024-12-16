@@ -14,5 +14,6 @@
     audacity
     balena-cli
     neovide
+    openvpn
   ];
 }

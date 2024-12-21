@@ -39,6 +39,12 @@
     tesseract
     kubernetes-helm
     nmap
+    silicon
+    rustup
+    hcloud
+    powershell
+    rogue
+    pgcli
  ];
 }
 

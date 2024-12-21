@@ -25,6 +25,7 @@
       "balenaetcher"
       "dymo-label"
       "android-studio"
+      "epic-games"
     ];
   };
 }

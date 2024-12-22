@@ -15,5 +15,7 @@
     balena-cli
     neovide
     openvpn
+    wezterm
+    virt-manager
   ];
 }

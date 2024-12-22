@@ -45,6 +45,7 @@
     powershell
     rogue
     pgcli
+    fontconfig
  ];
 }
 

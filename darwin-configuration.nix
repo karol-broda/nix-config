@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   imports = [
     ./modules/nixpkgs/system-apps.nix
@@ -15,12 +13,21 @@
   nixpkgs.config = {
     allowUnfree = true;
     allowBroken = true;
+    darwin.apple_sdk = {
+      path = builtins.exec ["xcrun" "--show-sdk-path"];
+      version = builtins.exec ["xcrun" "--sdk" "macosx" "--show-sdk-version"];
+    };
   };
 
   services.nix-daemon.enable = true;
+
+  security = {
+    pam = {
+      enableSudoTouchIdAuth = true;
+    };
+  };
 
   homebrew = {
     enable = true;
   };
 }
-

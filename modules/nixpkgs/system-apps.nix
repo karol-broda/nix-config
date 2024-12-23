@@ -46,6 +46,6 @@
     rogue
     pgcli
     fontconfig
- ];
+  ];
 }
 

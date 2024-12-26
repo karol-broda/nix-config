@@ -34,6 +34,7 @@
     flutter
     lazysql
     just
+    zellij
     kubectl
     minikube
     tesseract
@@ -46,6 +47,7 @@
     rogue
     pgcli
     fontconfig
+    spicetify-cli
   ];
 }
 

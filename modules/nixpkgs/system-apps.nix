@@ -47,7 +47,6 @@
     rogue
     pgcli
     fontconfig
-    spicetify-cli
   ];
 }
 

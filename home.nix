@@ -1,28 +1,26 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 let
-  userAppsModule = import ./modules/nixpkgs/user-apps.nix { inherit pkgs config; };
+  userAppsModule = import ./modules/nixpkgs/user-apps.nix {
+    inherit pkgs config lib;
+  };
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
   home.username = "karolbroda";
   home.homeDirectory = "/Users/karolbroda";
   home.stateVersion = "23.11";
 
-  home.packages = userAppsModule.userApps;
+  home.packages = userAppsModule.config.userApps;
 
-  programs.kitty = {
+  programs.spicetify = {
     enable = true;
-    font = "JetBrains Mono 12";
+    enabledExtensions = with spicePkgs.extensions; [
+      hidePodcasts
+      shuffle
+    ];
+    theme = spicePkgs.themes.catppuccin;
+    colorScheme = "macchiato";
   };
-
-  programs.fzf = {
-    enable = true;
-    keybindings = {
-      enable = true;
-    };
-    completion = {
-      enable = true;
-    };
-  };
-
 }
+

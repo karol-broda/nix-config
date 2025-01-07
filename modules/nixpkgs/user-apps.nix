@@ -16,14 +16,14 @@
       vscode
       rectangle
       _1password-cli
-      (pkgs.discord.override {
+      (discord.override {
         withVencord = true;
         withOpenASAR = true;
       })
       modrinth-app
       transmission_4-qt
       audacity
-      balena-cli
+      # balena-cli
       neovide
       openvpn
       wezterm
@@ -36,4 +36,3 @@
     environment.systemPackages = config.userApps;
   };
 }
-

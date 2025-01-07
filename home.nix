@@ -7,6 +7,9 @@ let
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
+  imports = [
+	./modules/darwin/apps/ui-identity.nix
+  ];
   home.username = "karolbroda";
   home.homeDirectory = "/Users/karolbroda";
   home.stateVersion = "23.11";

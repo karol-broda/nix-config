@@ -47,6 +47,8 @@
     rogue
     pgcli
     fontconfig
+    inetutils
+    maven
   ];
 }
 

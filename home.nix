@@ -18,6 +18,9 @@ in
     enabledExtensions = with spicePkgs.extensions; [
       hidePodcasts
       shuffle
+      popupLyrics
+      oneko
+      beautifulLyrics
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";

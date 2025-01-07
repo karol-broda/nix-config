@@ -16,7 +16,10 @@
       vscode
       rectangle
       _1password-cli
-      discord
+      (pkgs.discord.override {
+        withVencord = true;
+        withOpenASAR = true;
+      })
       modrinth-app
       transmission_4-qt
       audacity
@@ -24,7 +27,10 @@
       neovide
       openvpn
       wezterm
-      # spotify
+      aerospace
+      jankyborders
+      raycast
+      config.ubntIdentityEnterprise
     ];
 
     environment.systemPackages = config.userApps;

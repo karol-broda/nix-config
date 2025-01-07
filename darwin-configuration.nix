@@ -6,7 +6,8 @@
     ./modules/homebrew/appstore.nix
     ./modules/darwin/dock.nix
     ./modules/darwin/finder.nix
-    ];
+    ./modules/darwin/apps/ui-identity.nix
+  ];
 
   system.stateVersion = 5;
 
@@ -26,4 +27,8 @@
   homebrew = {
     enable = true;
   };
+
+  system.activationScripts.setVSCodeDefaults = ''
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+  '';
 }

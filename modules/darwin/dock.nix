@@ -3,6 +3,8 @@
 with lib;
 
 let
+  userName = "karolbroda";
+  userHomePath = "/Users/${userName}";
   entries = [
     "/System/Applications/Launchpad.app"
     "/Applications/Nix Apps/Kitty.app"
@@ -14,12 +16,11 @@ let
     "/Applications/1Password.app"
     "/System/Applications/Calendar.app/"
     "/Applications/Whisky.app"
-    "/Applications/Nix Apps/Spotify.app"
     "/Applications/Nix Apps/Discord.app"
   ];
-  folders = [
-    "~/work"
-    "~/personal"
+  folders = map (folder: "${userHomePath}/${folder}") [
+    "work"
+    "personal"
   ];
 in {
   config = {

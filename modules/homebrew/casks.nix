@@ -26,6 +26,7 @@
       "dymo-label"
       "android-studio"
       "epic-games"
+      "adobe-creative-cloud"
     ];
   };
 }

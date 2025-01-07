@@ -26,7 +26,9 @@
       darwinConfigurations = {
         "Karols-MacBook-Pro" = darwin.lib.darwinSystem {
           system = system;
-          modules = [ ./darwin-configuration.nix ];
+          modules = [ ./darwin-configuration.nix
+		      ./modules/darwin/apps/ui-identity.nix
+	  ];
         };
       };
 

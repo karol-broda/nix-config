@@ -1,8 +1,10 @@
-{ config, pkgs, lib, ... }:
-
-with lib;
-
-let
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+with lib; let
   userName = "karolbroda";
   userHomePath = "/Users/${userName}";
   entries = [
@@ -22,8 +24,7 @@ let
     "work"
     "personal"
   ];
-in
-{
+in {
   config = {
     system.defaults.dock = {
       persistent-apps = entries;

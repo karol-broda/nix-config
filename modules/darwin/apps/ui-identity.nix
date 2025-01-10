@@ -1,27 +1,25 @@
-{ config
-, pkgs
-, lib
-, ...
-}:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   options.ubntIdentityEnterprise = lib.mkOption {
     type = lib.types.package;
     description = "ui identity enterprise app package derivation.";
   };
 
-  config.ubntIdentityEnterprise =
-    let
-      version = "0.83.1";
-    in
+  config.ubntIdentityEnterprise = let
+    version = "0.83.1";
+  in
     pkgs.stdenv.mkDerivation {
       name = "ubnt-identity-enterprise-${version}";
       src = pkgs.fetchurl {
         url = "https://fw-download.ubnt.com/data/uid-ui-desktop-app/1e8e-macOS-0.83.1-247e0da2-e897-406e-ab55-fab75720bc60.pkg";
         sha256 = "1cn00cnav6hwifdnvdvxm062wb6d1nmr6x5xdsy616ja3ks5xlh0";
       };
-      phases = [ "installPhase" ];
-      nativeBuildInputs = [ pkgs.xar pkgs.cpio ];
+      phases = ["installPhase"];
+      nativeBuildInputs = [pkgs.xar pkgs.cpio];
 
       installPhase = ''
         set -x

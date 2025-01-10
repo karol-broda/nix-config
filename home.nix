@@ -1,12 +1,15 @@
-{ config, pkgs, inputs, lib, ... }:
-
-let
+{
+  config,
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: let
   userAppsModule = import ./modules/nixpkgs/user-apps.nix {
     inherit pkgs config lib;
   };
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in
-{
+in {
   imports = [
     ./modules/darwin/apps/ui-identity.nix
   ];
@@ -30,4 +33,3 @@ in
     colorScheme = "macchiato";
   };
 }
-

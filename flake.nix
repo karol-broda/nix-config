@@ -13,46 +13,50 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, spicetify-nix, ... }:
-    let
-      system = "aarch64-darwin";
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowUnfree = true;
-        };
+  outputs = {
+    self,
+    nixpkgs,
+    darwin,
+    home-manager,
+    spicetify-nix,
+    ...
+  }: let
+    system = "aarch64-darwin";
+    pkgs = import nixpkgs {
+      inherit system;
+      config = {
+        allowUnfree = true;
       };
-    in
-    {
-      darwinConfigurations = {
-        "Karols-MacBook-Pro" = darwin.lib.darwinSystem {
-          system = system;
-          modules = [
-            ./darwin-configuration.nix
-            ./modules/darwin/apps/ui-identity.nix
-          ];
-        };
+    };
+  in {
+    darwinConfigurations = {
+      "Karols-MacBook-Pro" = darwin.lib.darwinSystem {
+        system = system;
+        modules = [
+          ./darwin-configuration.nix
+          ./modules/darwin/apps/ui-identity.nix
+        ];
       };
+    };
 
-      homeConfigurations = {
-        karolbroda = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = system;
-            config = {
-              allowUnfree = true;
-            };
+    homeConfigurations = {
+      karolbroda = home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs {
+          system = system;
+          config = {
+            allowUnfree = true;
           };
-          modules = [
-            spicetify-nix.homeManagerModules.default
-            ./home.nix
-          ];
-          extraSpecialArgs = {
-            inputs = {
-              inherit spicetify-nix;
-            };
+        };
+        modules = [
+          spicetify-nix.homeManagerModules.default
+          ./home.nix
+        ];
+        extraSpecialArgs = {
+          inputs = {
+            inherit spicetify-nix;
           };
         };
       };
     };
+  };
 }
-

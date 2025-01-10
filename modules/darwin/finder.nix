@@ -1,10 +1,11 @@
-{ config, lib, ... }:
-
-let
+{
+  config,
+  lib,
+  ...
+}: let
   user = "karolbroda";
   home = "/Users/${user}";
-in
-{
+in {
   config = {
     system.defaults.finder = {
       AppleShowAllExtensions = true;
@@ -67,4 +68,3 @@ in
     };
   };
 }
-

@@ -22,7 +22,8 @@ let
     "work"
     "personal"
   ];
-in {
+in
+{
   config = {
     system.defaults.dock = {
       persistent-apps = entries;
@@ -33,4 +34,3 @@ in {
     };
   };
 }
-

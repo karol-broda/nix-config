@@ -48,7 +48,7 @@
     pgcli
     fontconfig
     inetutils
-    maven
+    gradle
+    wireshark
   ];
 }
-

@@ -13,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, spicetify-nix, ... }: 
+  outputs = { self, nixpkgs, darwin, home-manager, spicetify-nix, ... }:
     let
       system = "aarch64-darwin";
       pkgs = import nixpkgs {
@@ -22,20 +22,22 @@
           allowUnfree = true;
         };
       };
-    in {
+    in
+    {
       darwinConfigurations = {
         "Karols-MacBook-Pro" = darwin.lib.darwinSystem {
           system = system;
-          modules = [ ./darwin-configuration.nix
-		      ./modules/darwin/apps/ui-identity.nix
-	  ];
+          modules = [
+            ./darwin-configuration.nix
+            ./modules/darwin/apps/ui-identity.nix
+          ];
         };
       };
 
       homeConfigurations = {
         karolbroda = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
-           system = system;
+            system = system;
             config = {
               allowUnfree = true;
             };

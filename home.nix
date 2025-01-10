@@ -8,11 +8,11 @@ let
 in
 {
   imports = [
-	./modules/darwin/apps/ui-identity.nix
+    ./modules/darwin/apps/ui-identity.nix
   ];
   home.username = "karolbroda";
   home.homeDirectory = "/Users/karolbroda";
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.11";
 
   home.packages = userAppsModule.config.userApps;
 
@@ -24,6 +24,7 @@ in
       popupLyrics
       oneko
       beautifulLyrics
+      keyboardShortcut
     ];
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "macchiato";

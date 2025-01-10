@@ -16,8 +16,8 @@ with lib;
 
         automatically-unhide-macos-hidden-apps = true;
 
-        on-focus-changed = ["move-mouse window-lazy-center"];
-        on-focused-monitor-changed = ["move-mouse monitor-lazy-center"];
+        on-focus-changed = [ "move-mouse window-lazy-center" ];
+        on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
 
         gaps = {
           inner = {

@@ -4,7 +4,7 @@
   options = {
     userApps = lib.mkOption {
       type = lib.types.listOf lib.types.package;
-      default = [];
+      default = [ ];
       description = "List of user applications to install";
     };
   };
@@ -16,10 +16,7 @@
       vscode
       rectangle
       _1password-cli
-      (discord.override {
-        withVencord = true;
-        withOpenASAR = true;
-      })
+      discord
       modrinth-app
       transmission_4-qt
       audacity
@@ -31,6 +28,8 @@
       jankyborders
       raycast
       config.ubntIdentityEnterprise
+      monitorcontrol
+      ghostty
     ];
 
     environment.systemPackages = config.userApps;

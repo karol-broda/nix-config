@@ -23,7 +23,6 @@
       "raspberry-pi-imager"
       "angry-ip-scanner"
       "balenaetcher"
-      "dymo-label"
       "android-studio"
       "epic-games"
       "adobe-creative-cloud"

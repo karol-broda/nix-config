@@ -52,5 +52,6 @@
     inetutils
     gradle
     wireshark
+    ruff
   ];
 }

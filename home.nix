@@ -26,6 +26,7 @@ in {
       shuffle
       popupLyrics
       oneko
+      beautifulLyrics
       simpleBeautifulLyrics
       keyboardShortcut
     ];

@@ -50,7 +50,6 @@
     pgcli
     fontconfig
     inetutils
-    gradle
     wireshark
     ruff
     lua-language-server

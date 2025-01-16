@@ -32,7 +32,6 @@
       raycast
       config.ubntIdentityEnterprise
       monitorcontrol
-      ghostty
     ];
 
     environment.systemPackages = config.userApps;

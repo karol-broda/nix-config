@@ -28,6 +28,7 @@
       "android-studio"
       "epic-games"
       "adobe-creative-cloud"
+      "notion"
     ];
   };
 }

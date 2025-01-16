@@ -13,20 +13,21 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    darwin,
-    home-manager,
-    spicetify-nix,
-    ...
-  }: let
+  outputs = { self, nixpkgs, darwin, home-manager, spicetify-nix, ... }: let
     system = "aarch64-darwin";
+
+    overlays = [
+      (final: prev: {
+        systemd-minimal-libs = if system == "aarch64-darwin" then null else prev.systemd-minimal-libs;
+      })
+    ];
+
     pkgs = import nixpkgs {
       inherit system;
       config = {
         allowUnfree = true;
       };
+      overlays = overlays;
     };
   in {
     darwinConfigurations = {
@@ -46,6 +47,7 @@
           config = {
             allowUnfree = true;
           };
+          overlays = overlays;
         };
         modules = [
           spicetify-nix.homeManagerModules.default
@@ -60,3 +62,4 @@
     };
   };
 }
+

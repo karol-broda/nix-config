@@ -53,5 +53,6 @@
     gradle
     wireshark
     ruff
+    lua-language-server
   ];
 }

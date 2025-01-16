@@ -26,7 +26,7 @@ in {
       shuffle
       popupLyrics
       oneko
-      beautifulLyrics
+      simpleBeautifulLyrics
       keyboardShortcut
     ];
     theme = spicePkgs.themes.catppuccin;
